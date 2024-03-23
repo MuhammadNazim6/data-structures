@@ -99,6 +99,19 @@ removeFromIndex(index){
   this.size--
   return removedNode.value
 }
+
+reverse(){
+  let prev = null
+  let current = this.head
+  let next = null
+  while(current != null){
+    next = current.next
+    current.next = prev
+    prev = current
+    current = next
+  }
+  this.head = prev
+}
 }
 
 
@@ -116,4 +129,6 @@ LList.append(40)
 
 console.log(LList.insert(3 , 100));
 console.log(LList.removeFromIndex(3));
+LList.print()
+LList.reverse()
 LList.print()
