@@ -18,17 +18,20 @@ push(value){
 }
 
 pop(){
-  this.items.pop()
+  // this.items.pop()
      // OR //
-  // let removedValue = this.items[this.size- 1]
-  // for(let i = this.size ; i >= 0 ; i--){
-  //   this.items[i] = this.items[i-1]
-  // }
-  //    // OR // 
-  // this.size--
-  // return removedValue
+  let removedValue = this.items[this.size- 1]
+  for(let i = this.size-1 ; i > 0 ; i--){
+    this.items[i] = this.items[i-1] 
+  }
+  this.size--
+  this.items.length = this.size
+  return removedValue
 }
 
+print(){
+  console.log(this.items);
+}
 
 }
 
@@ -37,8 +40,10 @@ const newStack = new Stack()
 newStack.push(1)
 newStack.push(2)
 newStack.push(3)
-console.log(newStack);
+
+newStack.print()
 
 newStack.pop()
 newStack.pop()
-console.log(newStack);
+
+newStack.print()
