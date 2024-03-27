@@ -33,9 +33,11 @@ class min_Heap{
   }
 
   poll(){
+    let minValue =  this.data[0]
     this.data[0] = this.data[this.data.length -1 ]
     this.data.length --
     this.heapifyDown()
+    return minValue
   }
 
   heapifyDown(){
@@ -54,15 +56,31 @@ class min_Heap{
       }
     }
   }
+
+
+  heapSort(array){
+    const heap = new min_Heap()
+    for(let i = 0 ; i < array.length ; i++){
+      heap.push(array[i])
+    }
+    let sortedArr = [] 
+    while(heap.data.length > 0){
+      console.log(sortedArr.push(heap.poll()));
+    }
+    return sortedArr
+  }
+
 }
 
 
 const minHeap = new min_Heap()
-minHeap.push(25)
-minHeap.push(5)
-minHeap.push(40)
-minHeap.push(90)
+// minHeap.push(25)
+// minHeap.push(5)
+// minHeap.push(40)
+// minHeap.push(90)
 
-minHeap.poll()
+// minHeap.poll()
 
-console.log(minHeap);
+// console.log(minHeap);
+
+console.log(minHeap.heapSort([1,2000,55,623]));

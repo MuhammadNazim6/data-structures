@@ -67,15 +67,30 @@ class Heap{
     }
 
 
+    heapSort(array){
+      const heap = new Heap()
+      for(let i = 0 ; i < array.length ; i++){
+        heap.push(array[i])
+      }
+      let sortedArr = [] 
+      while(heap.data.length > 0){
+        console.log(sortedArr.push(heap.poll()));
+      }
+      return sortedArr
+    }
+
+
 }
 const heap = new Heap()
-heap.push(25)
-heap.push(5)
-heap.push(40)
-heap.push(90)
+// heap.push(25)
+// heap.push(5)
+// heap.push(40)
+// heap.push(90)
 
 
-console.log(heap.poll());
-console.log(heap.poll());
+// console.log(heap.poll());
+// console.log(heap.poll());
 
-console.log(heap);
+// console.log(heap);
+
+console.log(heap.heapSort([1,2000,55,623]));
