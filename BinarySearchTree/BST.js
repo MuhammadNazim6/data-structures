@@ -128,7 +128,7 @@ class BinarySearchTree{
   //   if(!root){
   //     return root
   //   }
-  }
+  
 
 
 isEqual(root1, root2){
@@ -143,8 +143,9 @@ isEqual(root1, root2){
   }
   return this.isEqual(root1.left , root2.left) && this.isEqual(root2.right , root2.right)
 }
-
 }
+
+
 
 const bst = new BinarySearchTree()
 const bst2 = new BinarySearchTree()

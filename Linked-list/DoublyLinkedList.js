@@ -79,14 +79,14 @@ class doublyLinkedList{
 }
 
 
-const newDLL = new doublyLinkedList()
-newDLL.append(99)
-newDLL.append(22)
-newDLL.append(45)
-newDLL.prepend('prepended 33')
+  const newDLL = new doublyLinkedList()
+  newDLL.append(99)
+  newDLL.append(22)
+  newDLL.append(45)
+  newDLL.prepend('prepended 33')
 
-newDLL.insertAt(2,100)
-newDLL.insertAt(2,11)
+  newDLL.insertAt(2,100)
+  newDLL.insertAt(2,11)
 
-newDLL.printForward()
+  newDLL.printForward()
 newDLL.printBackward()

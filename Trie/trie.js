@@ -48,7 +48,7 @@ class Trie{
     let curr = this.root
     for(let character of prefix){
       if(!curr.children[character]){
-        return false
+        return []
       }
       curr = curr.children[character]
     }
@@ -77,4 +77,4 @@ trie.insert('Ap')
 console.log(trie.search('Applee'));
 console.log(trie.startWith('App'));
 
-console.log(trie.autoComplete('Ap'));
+console.log(trie.autoComplete('Apk'));
