@@ -31,7 +31,6 @@ class Heap{
     let currIndex = this.data.length - 1
     while(this.data[currIndex] > this.data[this.getParentIndex(currIndex)]){
       this.swap(currIndex , this.getParentIndex(currIndex))
-
       currIndex = this.getParentIndex(currIndex)
     }
   }
@@ -53,7 +52,7 @@ class Heap{
 
         if( this.data[this.getRightChild(currIndex)]  &&
         this.data[this.getRightChild(currIndex)]  > this.data[this.getLeftChild(currIndex)] ){
-          biggestIndex = this.data[this.getRightChild(currIndex)] 
+          biggestIndex = this.getRightChild(currIndex) 
         }
 
         if(this.data[currIndex] < this.data[biggestIndex]){
@@ -74,7 +73,7 @@ class Heap{
       }
       let sortedArr = [] 
       while(heap.data.length > 0){
-        console.log(sortedArr.push(heap.poll()));
+        sortedArr.push(heap.poll())
       }
       return sortedArr
     }

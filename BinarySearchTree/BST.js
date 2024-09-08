@@ -1,4 +1,4 @@
-class Node{
+ class Node{
   constructor(value){
     this.value = value
     this.left = null
@@ -141,7 +141,7 @@ isEqual(root1, root2){
   if(root1.value !== root2.value ){
     return false
   }
-  return this.isEqual(root1.left , root2.left) && this.isEqual(root2.right , root2.right)
+  return this.isEqual(root1.left , root2.left) && this.isEqual(root1.right , root2.right)
 }
 }
 
